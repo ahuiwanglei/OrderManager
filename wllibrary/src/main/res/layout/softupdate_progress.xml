@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) 2015.
+  ~ All Rights Reserved.
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:padding="@dimen/dialog_padding"
+    android:gravity="center"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_dialog">
+
+            <TextView
+                android:id="@+id/tv_dialog_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_mediumn"
+                android:singleLine="true"
+                android:padding="@dimen/dialog_text_padding"
+                android:gravity="left|center_vertical"
+                android:textColor="@color/dialog_title_color"
+                android:text="标题" />
+
+            <View
+                android:id="@+id/view_horizontal_line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/dialog_title_color" />
+
+            <ProgressBar
+                android:id="@+id/update_progress"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:max="100"
+                android:progressDrawable="@drawable/progress_budget_horizontal"
+                android:progress="0"
+                android:layout_height="@dimen/dialog_download_height"
+                android:indeterminate="false" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

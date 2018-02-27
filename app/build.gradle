@@ -1,0 +1,46 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+    useLibrary 'org.apache.http.legacy'
+    dexOptions {
+        incremental true
+        javaMaxHeapSize "4g"
+    }
+    defaultConfig {
+        applicationId "com.ordermanger.online.ordermanager"
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    packagingOptions{
+        exclude("META-INF/ASL2.0")
+        exclude("META-INF/LICENSE")
+        exclude("META-INF/NOTICE")
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'assets/lineDashTexture.png'
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile files("libs/volley.jar")
+    compile files("libs/zxing.jar")
+    compile files('libs/jackson-core-asl-1.9.10.jar')
+    compile files('libs/jackson-mapper-asl-1.9.10.jar')
+    compile files('libs/gson-2.2.4.jar')
+    compile 'com.android.support:appcompat-v7:+'
+    compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha7'
+    testCompile 'junit:junit:4.12'
+    compile project(':wllibrary')
+
+}

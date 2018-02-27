@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) 2015.
+  ~ All Rights Reserved.
+  -->
+
+<resources>
+    <color name="translucent">#80000000</color>
+    <color name="button_pressed_color">#FFE9EAEA</color>
+    <color name="dialog_title_color">#03ABDF</color>
+</resources>

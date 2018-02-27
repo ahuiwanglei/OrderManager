@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">WMS仓储</string>
+
+    <string-array name="order_type">
+        <item >普通订单</item>
+        <item>紧急订单</item>
+    </string-array>
+</resources>
